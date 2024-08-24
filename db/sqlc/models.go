@@ -9,26 +9,26 @@ import (
 )
 
 type Account struct {
-	ID       int64     `json:"id"`
-	Owner    string    `json:"owner"`
-	Balance  int64     `json:"balance"`
-	Currency string    `json:"currency"`
-	CreateAt time.Time `json:"create_at"`
+	ID        int64     `json:"id"`
+	Owner     string    `json:"owner"`
+	Balance   int64     `json:"balance"`
+	Currency  string    `json:"currency"`
+	CreatedAt time.Time `json:"created_at"`
 }
 
 type Entry struct {
 	ID        int64 `json:"id"`
 	AccountID int64 `json:"account_id"`
 	// 可以是正的或负的
-	Amount   int64     `json:"amount"`
-	CreateAt time.Time `json:"create_at"`
+	Amount    int64     `json:"amount"`
+	CreatedAt time.Time `json:"created_at"`
 }
 
 type Transfer struct {
-	ID             int64 `json:"id"`
-	FromAccountsID int64 `json:"from_accounts_id"`
-	ToAccountsID   int64 `json:"to_accounts_id"`
+	ID            int64 `json:"id"`
+	FromAccountID int64 `json:"from_account_id"`
+	ToAccountID   int64 `json:"to_account_id"`
 	// 必须是正的
-	Amount   int64     `json:"amount"`
-	CreateAt time.Time `json:"create_at"`
+	Amount    int64     `json:"amount"`
+	CreatedAt time.Time `json:"created_at"`
 }
